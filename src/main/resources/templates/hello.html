@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Form</title>
-
-    <!-- Bootstrap CSS -->
+    <title>SuppliersChecker</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body style="background-color: lightblue;">
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-
-        </div>
-    </div>
+<body style="background-color: black;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+">
+<div style="color: white">
+    <h1>Найдите лучшего поставщика за считанные минуты</h1>
+    <h2>Рейтинг поставщиков - идеальный партнер для Вашего бизнеса</h2>
 </div>
 
-<!-- Bootstrap JS -->
+<canvas id="snow-flake-app" style="width: 100%; height: 100%"><script src="../js/scripts.js"></script>
+</canvas>
+
+<script>
+    //Here is configuration
+    window.animation_config = {
+        generatorDelay: {min: 1, max: 20}, //in ms
+        speed: 1, //1x
+        x_axis_rate: 0.1, // x axis mobility
+        weight: 0.5, //snow flake weight
+        size: 1.5, //snow flake size
+        z_axis_rate: 0.05, //z axis mobility
+        color: {b: 255, a: 0.8}, //b for brightness, a for alpha, by default generates random colors but if you set brightness 255 then you'll see only white color
+        wind: 0 // value's sign determines wind direction.
+    };
+</script>
+
 </body>
 </html>
+<!--<form th:action="@{/check}" th:object="${String}" method="post">-->
+<!--    <label for="inputField">Your request</label>-->
+<!--    <input type="text" id="inputField" name="Your request" th:required="required"/>-->
+
+<!--    <label for="textArea">Suppliers to check:</label>-->
+<!--    <textarea id="textArea" name="Suppliers to check" th:required="required"></textarea>-->
+
+<!--    <input type="submit" value="Submit"/>-->
+<!--</form>-->
