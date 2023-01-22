@@ -16,12 +16,12 @@
         font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 ">
 <hr style="color: white">
-<div style="color: white;padding-top: 25%; padding-left: 5%; margin-bottom: -10%">
+<div style="color: white;padding-top: 25%; padding-left: 5%;">
     <h1>Найдите лучшего контрагента за считанные минуты</h1>
     <h2>Рейтинг поставщиков - идеальный партнер для Вашего бизнеса</h2>
 </div>
-<div>
-    <input type="button" value="Искать" style="background-color: black;
+<div style="padding-top: 3%; padding-left: 5%">
+    <a th:href="@{/request}" class="btn btn-primary" style="background-color: black;
                                                 border-color: white;
                                                 color: white;
                                                 border-radius: 5px;
@@ -29,9 +29,9 @@
                                                 padding-top: 10px;
                                                 padding-bottom: 10px;
                                                 font-family: 'Apple Symbols', sans-serif;
-                                                font-size: 25px"/>
+                                                font-size: 25px">Искать</a>
 </div>
-<div class="container">
+<div class="container" style="margin-top: -10%; margin-left: 50%">
     <div class="bear">
         <div class="bear__ears">
             <div class="bear__ears__left ear"></div>
@@ -51,12 +51,3 @@
 </div>
 </body>
 </html>
-<!--<form th:action="@{/check}" th:object="${String}" method="post">-->
-<!--    <label for="inputField">Your request</label>-->
-<!--    <input type="text" id="inputField" name="Your request" th:required="required"/>-->
-
-<!--    <label for="textArea">Suppliers to check:</label>-->
-<!--    <textarea id="textArea" name="Suppliers to check" th:required="required"></textarea>-->
-
-<!--    <input type="submit" value="Submit"/>-->
-<!--</form>-->
