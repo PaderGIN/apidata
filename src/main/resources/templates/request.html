@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuppliersChecker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bear.css">
 </head>
-<body>
-Hi
+<body style="background-color: black; margin: 0; padding: 0; width: 100vw; height: 100vh; font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+<form th:action="@{/request/research}" method="post" style="color: white">
+    <div>
+        <label for="inputName">Name:</label>
+        <input type="text" id="inputName" name="name" th:required="true" />
+    </div>
+    <div>
+        <label for="inputDescription">Description:</label>
+        <textarea id="inputDescription" name="description" th:required="true"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+</form>
 </body>
 </html>
