@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuppliersChecker</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/bear.css">
+    <link rel="stylesheet" href="../css/request.css">
 </head>
 <body style="background-color: black; margin: 0; padding: 0; width: 100vw; height: 100vh; font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
-<form th:action="@{/request/research}" method="post" style="color: white">
-    <div>
-        <label for="inputName">Name:</label>
-        <input type="text" id="inputName" name="name" th:required="true" />
-    </div>
-    <div>
-        <label for="inputDescription">Description:</label>
-        <textarea id="inputDescription" name="description" th:required="true"></textarea>
-    </div>
-    <div>
-        <input type="submit" value="Submit" />
-    </div>
-</form>
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 18%; text-align-all: center">
+    <form th:action="@{/request/research}" method="post" style="color: white">
+        <div>
+            <h1 for="inputName">Ваш запрос</h1>
+            <input type="text" id="inputName" name="name" th:required="true"
+                   style="background-color: black; border-color: white; border-radius: 5px; color: white; width: 100%"/>
+        </div>
+        <div>
+            <h1 for="inputDescription">Список ИНН</h1>
+            <textarea id="inputDescription" name="description" th:required="true"
+                      style="background-color: black; border-color: white; border-radius: 5px; color: white; width: 100%; height: 100px; resize: none"></textarea>
+        </div>
+        <div>
+            <a th:href="@{/request/search}" class="btn btn-primary" style="background-color: black;
+                                                border-color: white;
+                                                color: white;
+                                                border-radius: 5px;
+                                                padding-inline: 30px;
+                                                padding-top: 10px;
+                                                padding-bottom: 10px;
+                                                font-family: 'Apple Symbols', sans-serif;
+                                                font-size: 25px">Проверить</a>
+        </div>
+    </form>
+</div>
 </body>
 </html>

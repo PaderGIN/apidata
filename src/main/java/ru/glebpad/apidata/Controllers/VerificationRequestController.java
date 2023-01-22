@@ -6,21 +6,26 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import ru.glebpad.apidata.Services.SearchService;
 
 @RequestMapping("/request")
 @Controller
 public class VerificationRequestController {
+
     private final SearchService searchService;
+
     @Autowired
-    public VerificationRequestController(SearchService searchService){
+    public VerificationRequestController(SearchService searchService) {
         this.searchService = searchService;
     }
+
     @GetMapping("")
-    public String request(Model model){
+    public String request(Model model) {
         return "request";
     }
+
     @PostMapping("/search")
-    public String analyseRequest(){
+    public String analyseRequest() {
         return null;
     }
 }
