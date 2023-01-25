@@ -40,6 +40,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/paderGIN/apidata:${{ github.ref_name }}
+          tags: ghcr.io/padergin/apidata:${{ github.ref_name }}
           secrets: |
             "github_token=${{ secrets.GITHUB_TOKEN }}"
