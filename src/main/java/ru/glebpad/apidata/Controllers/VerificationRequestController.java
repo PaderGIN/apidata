@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import ru.glebpad.apidata.Services.SearchService;
 
+import java.sql.SQLException;
+
 @RequestMapping("/request")
 @Controller
 public class VerificationRequestController {
-
     private final SearchService searchService;
+
 
     @Autowired
     public VerificationRequestController(SearchService searchService) {
@@ -24,8 +26,9 @@ public class VerificationRequestController {
         return "request";
     }
 
-    @PostMapping("/search")
-    public String analyseRequest() {
-        return null;
+    @GetMapping("/search")
+    public String analyseRequest() throws SQLException {
+        searchService.handleRequest();
+        return "result";
     }
 }
